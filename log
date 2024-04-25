@@ -14,3 +14,19 @@ Thu 25 Apr 2024 01:56:20 PM UTC:
  1 file changed, 5 insertions(+), 1 deletion(-)
  tests:  0|0
 1474a46
+Thu 25 Apr 2024 01:57:23 PM UTC: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccLOwKyq.o: in function `insert_test1':
+test.c:(.text+0x7bb): undefined reference to `insertMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccLOwKyq.o: in function `insert_test2':
+test.c:(.text+0x8d2): undefined reference to `insertMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccLOwKyq.o: in function `insert_test3':
+test.c:(.text+0x942): undefined reference to `insertMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccLOwKyq.o: in function `insert_test4':
+test.c:(.text+0x9d8): undefined reference to `insertMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0xa68): undefined reference to `insertMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccLOwKyq.o:test.c:(.text+0xb16): more undefined references to `insertMap' follow
+collect2: error: ld returned 1 exit status
+Compilation failed
+873b8bb
