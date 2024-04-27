@@ -115,28 +115,25 @@ HashMap * createMap(long capacity) {
 }
 
 void eraseMap(HashMap * map,  char * key) {
-  Pair *pair = searchMap(map, key);
-  if (pair != NULL) {
-      
-      pair->key = NULL;
-      
-      map->size--;
-  }
-  
+    Pair *pair = searchMap(map, key);
+    if (pair != NULL) {
+        pair->key = NULL;
+        map->size--;
+    }
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
-  long pos = hash(key,map->capacity);
+    long pos = hash(key, map->capacity);
 
-  while(map->buckets[pos] != NULL && map->buckets[pos]->key != NULL){
-      if(is_equal(key,map->buckets[pos]->key) == 0)
-      {
-        return map->buckets[pos];
-      }
-      pos = (pos+1) % map->capacity;
+    while(map->buckets[pos] != NULL && map->buckets[pos]->key != NULL){
+        if(is_equal(key,map->buckets[pos]->key) == 1)
+        {
+            return map->buckets[pos];
+        }
+        pos = (pos+1) % map->capacity;
     }
 
-  return NULL;
+    return NULL;
 }
 
 Pair * firstMap(HashMap * map) {
